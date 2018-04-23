@@ -1,0 +1,21 @@
+
+data_dir = '/home/user/data'
+
+
+"""VK settings"""
+# access token for VK API
+vk_token = ''
+
+
+"""WhatsApp settings"""
+# authorization details for mailbox, which you've sent your whatsapp chats to
+imap_ssl = 'imap.gmail.com'
+mail_address = 'your.address@whatever.com'
+mail_pass = 'password'
+mail_dir = 'INBOX'
+# this name will appear in your chat history for outgoing messages (may be just a phone number
+#   if you didn't specify it)
+wa_username = 'John Smith'
+# this may be different depending on your locale
+wa_date_pattern = r"(\d\d\d\d-\d\d-\d\d, \d{1,2}:\d{1,2} - )"
+wa_date_format = '%Y-%m-%d, %H:%M'

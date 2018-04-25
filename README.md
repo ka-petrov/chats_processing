@@ -13,7 +13,6 @@ content may be specific to this language. But most of it should be applicable to
 other languages as well.
 
 More notebooks to be added soon:
-* spellchecker and analysis of common grammar mistakes / typos
 * sentiment analysis
 
  ### Installation:

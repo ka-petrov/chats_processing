@@ -3,4 +3,4 @@
 !/.gitignore
 *.pyc
 __pycache__
-ettings.py
+settings.py

@@ -6,7 +6,7 @@ network. Data is stored in unified format as HDF files and can be merged into a 
 messages dataset with `data/merge_data.py` script. By default only outgoing messages are downloaded.
 
 Check out sample Jupyter notebooks in the root directory for some examples on what kind of analysis 
-you can do with this data. 
+you can do with this data. The preferred order of reading is: words_distribution -> message_length_count -> spelling.
 
 **Note:** I've used my own message history in Russian language to develop this, so some of the
 content may be specific to this language. But most of it should be applicable to English and many 

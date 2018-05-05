@@ -18,8 +18,8 @@ More notebooks to be added soon:
  ### Installation:
  
  - Python 3.* is required
- - `git clone ...`
- - `cd ...`
+ - `git clone https://github.com/imaginary-unit/chats_processing.git`
+ - `cd chats_processing`
  - `pip3 install -r requirements.txt`
  - `cp settings.py.template settings.py`, update the settings file with your data path, accounts
  details, etc.

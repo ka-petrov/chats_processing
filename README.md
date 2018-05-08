@@ -12,9 +12,6 @@ you can do with this data. The preferred order of reading is: words_distribution
 content may be specific to this language. But most of it should be applicable to English and many 
 other languages as well.
 
-More notebooks to be added soon:
-* sentiment analysis
-
  ### Installation:
  
  - Python 3.* is required

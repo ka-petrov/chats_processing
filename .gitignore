@@ -4,3 +4,5 @@
 *.pyc
 __pycache__
 settings.py
+*.sublime-project
+*.sublime-workspace

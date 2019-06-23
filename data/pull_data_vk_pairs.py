@@ -114,30 +114,3 @@ if __name__ == '__main__':
             # save the results
             df.to_hdf(os.path.join(data_path, 'user_%d.h5' % u), key='messages')
             # df.to_csv(os.path.join(data_path, 'user_%d.csv' % u))
-
-    # get messages for chats
-    print('Processing chats...')
-    for i, ch in enumerate(chats):
-        df = pd.DataFrame()
-        print('chat = %s; %d / %d' % (ch[1], i, len(chats)))
-        hist = api_call(vk_api.messages.getHistory,
-                        peer_id=chat_id_offset+ch[0], count=0)
-        n = hist['count']
-        for i in range(0, n, max_items):
-            time.sleep(api_delay)
-            print('%d / %d' % (i, n))
-            messages = api_call(vk_api.messages.getHistory,
-                                peer_id=chat_id_offset+ch[0],
-                                offset=i, count=max_items)
-            # select only outgoing messages and filter columns
-            messages = [{c: x.get(c) for c in columns_list}
-                        for x in messages['items'] if x['out'] == 1]
-            if len(messages) > 0:
-                df = df.append(messages)
-        if not df.empty:
-            df['date'] = df['date'].apply(lambda x: datetime.fromtimestamp(x))
-            df['source'] = 'vk'
-            df['peer'] = ch[1]
-            # save the results
-            df.to_hdf(os.path.join(data_path, 'chat_%d.h5' % ch[0]), key='messages')
-            # df.to_csv(os.path.join(data_path, 'chat_%d.csv' % ch[0]))

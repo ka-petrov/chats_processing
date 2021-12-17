@@ -1,5 +1,11 @@
 # Chat messages analysis + NLP basics
 
+### Update:
+**As of 2021, the messenger's APIs have changed and the data downloading instructions probably won't work.** 
+Sample notebooks are still worth a look though, in case you've already got your message history from any source.
+
+---
+
 This repository provides Python scripts to download chat history for WhatsApp messenger 
 (`data/pull_data_wa.py`) and for VK.com (`data/pull_data_vk.py`) - the most popular Russian social
 network. Data is stored in unified format as HDF files and can be merged into a single 
